@@ -1,0 +1,300 @@
+@font-face
+  font-family Inter
+  font-weight 400
+  font-style italic
+  src url(/fonts/Inter-Italic.woff2) format("woff2"), url(/fonts/Inter-Italic.woff) format("woff")
+  
+@font-face
+  font-family Inter
+  font-weight 500
+  font-style italic
+  src url(/fonts/Inter-MediumItalic.woff2) format("woff2"), url(/fonts/Inter-MediumItalic.woff) format("woff")
+    
+@font-face
+  font-family Inter
+  font-weight 600
+  font-style italic
+  src url(/fonts/Inter-SemiBoldItalic.woff2) format("woff2"), url(/fonts/Inter-SemiBoldItalic.woff) format("woff")
+      
+@font-face
+  font-family Inter
+  font-weight 700
+  font-style italic
+  src url(/fonts/Inter-BoldItalic.woff2) format("woff2"), url(/fonts/Inter-BoldItalic.woff) format("woff")
+        
+@font-face
+  font-family Inter
+  font-weight 800
+  font-style italic
+  src url(/fonts/Inter-ExtraBoldItalic.woff2) format("woff2"), url(/fonts/Inter-ExtraBoldItalic.woff) format("woff")
+        
+@font-face
+  font-family Canela wf
+  font-weight 500
+  font-style normal
+  src url(/fonts/CanelaMedium.woff2) format("woff2"), url(/fonts/CanelaMedium.woff) format("woff")
+  
+body
+  min-height: 100vh
+  font-size: 15px
+  font-family: Inter, sans-serif
+  
+  @media screen and (min-width: 768px)
+    font-size: 17px
+  
+  @media screen and (min-width: 768px)
+    font-size: 18px
+
+strong, b
+  font-weight: 600
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 800
+  line-height: 1.3
+  
+  @media screen and (min-width: 768px)
+    line-height: 1.25
+  
+  @media screen and (min-width: 768px)
+    line-height: 1.21
+  
+h1
+  font-size: 24px
+  font-weight: 500
+  line-height: 1.375
+  font-family: Canela wf
+  
+  @media screen and (min-width: 768px)
+    font-size: 32px
+  
+  @media screen and (min-width: 768px)
+    font-size: 40px
+
+h2
+  padding-bottom: 0
+  border-bottom-width: 0
+  font-size: 18px
+  
+  @media screen and (min-width: 768px)
+    font-size: 20px
+  
+  @media screen and (min-width: 768px)
+    font-size: 22px
+
+h3
+  font-size: 15px
+  
+  @media screen and (min-width: 768px)
+    font-size: 17px
+  
+  @media screen and (min-width: 768px)
+    font-size: 18px
+
+p, ul, ol
+  line-height: 1.5
+
+p
+  margin-top: 1.5em
+  margin-bottom: 1.5em
+
+.theme-default-content:not(.custom)
+  padding-top: 100px
+
+.theme-default-content:not(.custom)
+  > h1:first-child,
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child,
+  > h5:first-child,
+  > h6:first-child
+    margin-bottom: 1.5em
+
+.theme-default-content:not(.custom) > h2
+  margin-bottom: 11px
+  
+  + p
+    margin-top: 11px
+
+.sidebar-group.is-sub-group > .sidebar-heading
+  font-size: 1em !important
+  
+.theme-default-content code
+  background-color: rgba(9,9,9,0.05)
+  
+.sidebar
+  background-color: #fff
+  border-right-width: 0
+  
+.navbar
+  border-bottom-width: 1px
+  
+  .logo
+    min-width: 2.6rem !important
+    height: 2.6rem !important
+    margin-top: 0.25rem
+
+  .site-name
+    font-weight: 500
+
+.sidebar-heading.clickable.active,
+a.sidebar-link.active
+  border-left-color: #00e29c !important
+  
+.theme-default-content:not(.custom) a:hover
+  text-decoration: none
+  color: #008c60
+
+a
+  transition: 0.15s
+
+a:hover
+  color: #008c60
+  
+.nav-links a:hover,
+.nav-links a.router-link-active
+  color: #008c60 !important
+  
+.sidebar-button
+  top: 1.1rem !important
+  
+.sidebar > .sidebar-links > li:last-child
+  .sidebar-heading
+    opacity: 0.4
+    max-width: 220px
+    margin-top: 30px
+    font-weight: normal
+    font-size: 12px
+    cursor: default
+    
+  .arrow
+    display: none
+
+.sidebar > .sidebar-links > li > a.sidebar-link.sidebar-link
+  font-weight: 500
+
+.sidebar-sub-headers
+  display: none
+
+.navbar .links
+  align-items: center
+  
+.theme-switcher
+  display: inline-flex
+  align-items: center
+  height: 28px
+  margin-right: 1rem
+  position: relative
+  user-select: none
+  
+  &-input
+    position: absolute
+    top: 0
+    left: -9000px
+    
+    &:checked
+      background: blue
+      
+      ~ .theme-switcher
+        &-label
+          &:nth-of-type(1)
+            display: inline-block
+            
+          &:nth-of-type(2)
+            display: none
+            
+        &-control
+          &::before
+            transform: translateX(20px)
+  &-label
+    display: inline-block
+    margin-right: 15px
+    font-size: 13px
+    color: rgba(9,9,9,0.5)
+    
+    &:nth-of-type(1)
+      display: none
+      
+  &-control
+    display: inline-block
+    width: 48px
+    height: 28px
+    position: relative
+    border: 1px solid #d4d9d6
+    border-radius: 14px
+    
+    &::before
+      content: ""
+      width: 20px
+      height: 20px
+      position: absolute
+      top: 3px
+      left: 3px
+      background: rgba(0,226,156,0.7)
+      border: 1px solid rgba(0,179,123,0.5)
+      border-radius: 50%
+      transition: transform 0.1s
+      
+.dark-mode
+  background: #171717
+  color: #FAF5EA
+  
+  .navbar
+    background: #171717
+    border-bottom-color: #333
+    
+    .site-name
+      color: #FAF5EA
+      
+    .links
+      background: #171717
+    
+    .search-box input
+      background-color: transparent
+      border-color: #555
+      color: #FAF5EA
+      
+  .search-box
+    .suggestions
+      background: #171717
+      border-color: #333
+      
+      .suggestion
+        a
+          color lighten($textColor, 70%)
+          
+        &.focused
+          background: #333
+          a
+            color $accentColor
+  
+  .sidebar
+    background: #171717
+    
+  a.sidebar-link,
+  .sidebar-heading
+    color: #FAF5EA
+    
+  .theme-default-content
+    code
+      background-color: rgba(255,255,255,0.1);
+      color: #FAF5EA
+      
+  .page-nav .inner,
+  hr
+    border-color: #333
+    
+  .custom-block.warning
+    color: #cbbd76
+    
+  th, td
+    border-color: #555
+    
+  tr:nth-child(2n)
+    background-color: #222
+    
+  .theme-switcher
+    &-label
+      color: rgba(255,255,255,0.5)
+    
+    &-control
+      border-color: #555
