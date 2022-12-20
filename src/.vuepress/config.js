@@ -4,6 +4,7 @@ const author = "Golem Foundation";
 const ogprefix = "og: http://ogp.me/ns#";
 
 module.exports = {
+  base: "/hexagon-docs/",	
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
